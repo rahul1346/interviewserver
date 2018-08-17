@@ -13,6 +13,9 @@ router.post('/', function(req, res, next) {
 		console.log(speech)
 		
 		return res.json({
+			req1: req.body.result,
+			req2: req.body.result.parameters,
+			req3: req.body.result.parameters.isName,
 			speech: speech,
 			displayText: speech,
 			source: 'webhook-isAuthorized-sample'
