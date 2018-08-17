@@ -6,9 +6,12 @@ router.post('/', function(req, res, next) {
 	let speech = 
 		req.body.result &&
 		req.body.result.parameters &&
-		req.body.result.parameters.isAuthorized
-			? req.body.result.parameters.isAuthorized
+		req.body.result.parameters.isName
+			? req.body.result.parameters.isName
 			: "Didnt matter";
+
+		console.log(speech)
+		
 		return res.json({
 			speech: speech,
 			displayText: speech,
